@@ -1,5 +1,5 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from './common';
 
@@ -11,33 +11,29 @@ const LibraryList = () => {
   const dispatch = useDispatch();
   const labList = useSelector((state) => state.libraries.libraries);
 
-  const handleButtonPress = () => {
-    // Dispatch the showData action with library data as payload
-    console.warn("button")
+  
+  useEffect(()=>{
+    
     console.log(libraryData);
     dispatch(showData(libraryData));
-  };
-
+  })
+  
   return (
     <View>
-      
-      <Button
-        value="show list"
-        onButtonPress={handleButtonPress} 
-      />
-    
-     <FlatList
+      {labList && (
+        <FlatList
           data={labList}
           renderItem={({ item }) => (
             <ListItem
-            item= {item}
+              item={item}
             />
           )}
           keyExtractor={(item) => item.id.toString()}
-      />
-
+        />
+      )}
     </View>
-  )
+  );
+  
 }
 
 export default LibraryList

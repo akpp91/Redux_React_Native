@@ -11,7 +11,7 @@ import LibraryList from './Component/LibraryList'
 const App = () => {
   return (
     <Provider store={store}>
-      <View>
+      <View style={{flex:1}}>
         <Header headerText={'Tech Stack'}/>
         <LibraryList></LibraryList>
       </View>

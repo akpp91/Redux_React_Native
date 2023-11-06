@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     containerStyle:{
         borderBottomWidth:1,
         padding:5,
-        backgroundColor:'#fff',
+        backgroundColor:'#000',
         flexDirection:'row',
         justifyContent:'flex-start',
 
-        borderColor:'#ddd',
+        borderColor:'red',
         position:'relative'
     }
 })
