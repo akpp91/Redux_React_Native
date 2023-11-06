@@ -3,7 +3,7 @@ import React from 'react'
 
 const CardSection = (props) => {
   return (
-    <View>
+    <View style={styles.containerStyle}>
       {props.children}
     </View>
   )
@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     containerStyle:{
         borderBottomWidth:1,
         padding:5,
-        backgroundColor:'#000',
+        backgroundColor:'#fff',
         flexDirection:'row',
         justifyContent:'flex-start',
 
-        borderColor:'red',
+        borderColor:'#ddd',
         position:'relative'
     }
 })

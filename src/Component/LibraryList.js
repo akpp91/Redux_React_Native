@@ -14,7 +14,6 @@ const LibraryList = () => {
   
   useEffect(()=>{
     
-    console.log(libraryData);
     dispatch(showData(libraryData));
   })
   
